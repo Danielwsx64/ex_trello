@@ -1,6 +1,6 @@
-defmodule ExTrello do
+defmodule Trellox do
   @moduledoc """
-  Documentation for `ExTrello`.
+  Documentation for `Trellox`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule ExTrello do
 
   ## Examples
 
-      iex> ExTrello.hello()
+      iex> Trellox.hello()
       :world
 
   """

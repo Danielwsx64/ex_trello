@@ -1,13 +1,13 @@
-defmodule ExTrello.MixProject do
+defmodule Trellox.MixProject do
   use Mix.Project
 
   @version "0.0.1"
   @description "A client library for Trello API"
-  @links %{"GitHub" => "https://github.com/Danielwsx64/ex_trello"}
+  @links %{"GitHub" => "https://github.com/Danielwsx64/trellox"}
 
   def project do
     [
-      app: :ex_trello,
+      app: :trellox,
       version: @version,
       description: @description,
       source_url: @links["GitHub"],

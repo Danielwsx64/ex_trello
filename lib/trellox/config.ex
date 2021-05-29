@@ -1,11 +1,11 @@
-defmodule ExTrello.Config do
+defmodule Trellox.Config do
   @moduledoc """
-  ExTrello client configurations
+  Trellox client configurations
 
-  To use `ExTrello` you must add into your config file `config.exs` the
+  To use `Trellox` you must add into your config file `config.exs` the
   required config:
 
-      config :ex_trello, key: "your-trello-api-key"
+      config :trellox, key: "your-trello-api-key"
 
   Allowed configuration:
 
@@ -38,7 +38,7 @@ defmodule ExTrello.Config do
   @doc false
   @spec build(config_overrides()) :: t()
   def build(overrides) do
-    :ex_trello
+    :trellox
     |> Application.get_all_env()
     |> Keyword.merge(overrides)
     |> build_struct()
@@ -49,7 +49,7 @@ defmodule ExTrello.Config do
       key: get(configs, :key),
       host: host_uri(configs),
       adapter: %Adapter{
-        module: ExTrello.Adapter.Tesla,
+        module: Trellox.Adapter.Tesla,
         configs: [adapter: Tesla.Adapter.Hackney]
       }
     }
